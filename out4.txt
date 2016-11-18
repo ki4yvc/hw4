@@ -1,0 +1,69 @@
+
+Truck:
+	Number of doors: 2
+	Number of cylinders: 16
+	color: red
+	Tank size: 30
+	Fuel level: 15
+	Transmission type: 8
+	The truck is currently not carrying cargo.
+
+Truck:
+	Number of doors: 2
+	Number of cylinders: 16
+	color: green
+	Tank size: 30
+	Fuel level: 20
+	Transmission type: 8
+	The truck is currently not carrying cargo.
+
+Taxi:
+	Number of doors: 4
+	Number of cylinders: 6
+	color: yellow
+	Tank size: 20
+	Fuel level: 10.5
+	Transmission type: 5
+	The taxi currently has no passengers.
+
+Taxi:
+	Number of doors: 4
+	Number of cylinders: 6
+	color: yellow
+	Tank size: 20
+	Fuel level: 7.5
+	Transmission type: 5
+	The taxi currently has no passengers.
+
+Truck:
+	Number of doors: 2
+	Number of cylinders: 16
+	color: black
+	Tank size: 30
+	Fuel level: 22.5
+	Transmission type: 8
+	The truck is currently not carrying cargo.
+
+Taxi:
+	Number of doors: 4
+	Number of cylinders: 6
+	color: white
+	Tank size: 20
+	Fuel level: 8.5
+	Transmission type: 5
+	The taxi currently has no passengers.
+
+Taxi:
+	Number of doors: 4
+	Number of cylinders: 6
+	color: orange
+	Tank size: 20
+	Fuel level: 5.5
+	Transmission type: 5
+	The taxi currently has no passengers.
+
+Lot C1 count:
+	Number of Taxis  =   4
+	Number of Trucks =   3
+	Total number parked: 7
+

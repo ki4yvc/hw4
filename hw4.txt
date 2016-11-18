@@ -1,0 +1,7 @@
+truck 15.0 red
+truck 20.0 green
+taxi 10.5 yellow
+taxi 7.5 yellow
+truck 22.5 black
+taxi 8.5 white
+taxi 5.5 orange
