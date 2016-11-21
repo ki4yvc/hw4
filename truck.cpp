@@ -10,7 +10,7 @@ Truck::Truck(double);
 
 }
 
-Truck::Truck(double fuel, string color);
+Truck::Truck(double fuel, string color) : Vehicle(fuel, color);
 {
 
 }

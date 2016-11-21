@@ -5,6 +5,7 @@ Vehicle::Vehicle()
 
 }
 
+// Validation is required  in the contructor
 Vehicle::Vehicle(const int doors, const int cylinders, string color,
            const double tank, double initialfuel,
            const int transmission);
@@ -17,6 +18,7 @@ Vehicle::Vehicle(const int doors, const int cylinders, string color,
 	transmissionType = transmission;
 }
 
+// Returns number of vehicles
 static int Vehicle::getCount();
 {
 

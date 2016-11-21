@@ -5,9 +5,11 @@ Taxi::Taxi();
 
 }
 
-Taxi::Taxi(double fuel, string color);
+Taxi::Taxi(double fuel, string color) : Vehicle(fuel, color);
 {
+	// Vehicle data is going to come first
 
+	// now the track data can come through
 }
 
 Taxi::Taxi(double);
