@@ -18,4 +18,6 @@ class ParkingLot
 
 
     string id;
+    list<Vehicle *> allVehicles;
+    list<Vehicle *>::iterator iter;
 };

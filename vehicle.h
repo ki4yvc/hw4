@@ -10,7 +10,6 @@ class Vehicle
 {
   public:
    Vehicle();
-   Vehicle(ifstream &infile);
    Vehicle(const int doors, const int cylinders, string color,
            const double tank, double initialfuel,
            const int transmission);
@@ -30,6 +29,9 @@ class Vehicle
    /**  COMPLETE FOR HOMEWORK 4                          **/
    /** write declaration for pure virtual function horn  **/
    /** write declaration for pure virtual function print **/
+
+   virtual void horn()=0;
+   virtual void print()=0;
 
   protected:
    string type;

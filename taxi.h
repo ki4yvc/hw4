@@ -9,7 +9,6 @@ class Taxi : public Vehicle
 {
   public:
    Taxi();
-   Taxi(ifstream &infile);
    Taxi(double fuel, string color);
    Taxi(double);
    ~Taxi();

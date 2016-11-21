@@ -10,7 +10,6 @@ class Truck : public Vehicle
   public:
    Truck();
    Truck(double);
-   Truck(ifstream &infile);
    Truck(double fuel, string color);
    ~Truck();
    virtual bool hasPossession() const;
