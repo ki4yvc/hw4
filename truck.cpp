@@ -1,26 +1,26 @@
 #include "truck.h"
-
-Truck::Truck();
+int Truck::count = 0;
+Truck::Truck()
 {
-
+	count++;
 }
 
-Truck::Truck(double);
+Truck::Truck(double)
 {
-
+	count++;
 }
 
-Truck::Truck(double fuel, string color);
+Truck::Truck(double fuel, string color)
 {
-
+	count++;
 }
 
-Truck::~Truck();
+Truck::~Truck()
 {
-
+	count--;
 }
 
-virtual bool Truck::hasPossession() const;
+virtual bool Truck::hasPossession() const
 {
 	if(cargo){
 		return true;
@@ -29,7 +29,7 @@ virtual bool Truck::hasPossession() const;
 	}
 }
 
-void Truck::setCargo(bool);
+void Truck::setCargo(bool)
 {
 	if(bool){
 		cargo = true;
@@ -38,12 +38,12 @@ void Truck::setCargo(bool);
 	}
 }
 
-static int Truck::getCount();
+static int Truck::getCount()
 {
 	return count;
 }
 
-static void Truck::incCount();
+static void Truck::incCount()
 {
 	count++;
 }

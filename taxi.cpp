@@ -1,26 +1,26 @@
 #include "taxi.h"
-
-Taxi::Taxi();
+int Taxi::count = 0;
+Taxi::Taxi()
 {
-
+	count++;
 }
 
-Taxi::Taxi(double fuel, string color);
+Taxi::Taxi(double fuel, string color)
 {
-
+	count++;
 }
 
-Taxi::Taxi(double);
+Taxi::Taxi(double)
 {
-
+	count++;
 }
 
-Taxi::~Taxi();
+Taxi::~Taxi()
 {
-
+	count--;
 }
 
-virtual bool Taxi::hasPossession() const;
+virtual bool Taxi::hasPossession() const
 {
 	if(customers){
 		return true;
@@ -29,7 +29,7 @@ virtual bool Taxi::hasPossession() const;
 	}
 }
 
-void Taxi::setCustomers(bool);
+void Taxi::setCustomers(bool)
 {
 	if(bool){
 		customers = true;
@@ -38,12 +38,12 @@ void Taxi::setCustomers(bool);
 	}
 }
 
-static int Taxi::getCount();
+static int Taxi::getCount()
 {
 	return count;
 }
 
-static void Taxi::incCount();
+static void Taxi::incCount()
 {
 	count++;
 }

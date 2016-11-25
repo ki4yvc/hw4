@@ -13,8 +13,7 @@ class Vehicle
    Vehicle(const int doors, const int cylinders, string color,
            const double tank, double initialfuel,
            const int transmission);
-   static int getCount();
-   virtual ~Vehicle(); 
+   virtual ~Vehicle();
    void setType(string type);
    void setColor(string color);
    void setFuelLevel(double amount);
@@ -35,7 +34,7 @@ class Vehicle
 
   protected:
    string type;
-   const int numDoors; 
+   const int numDoors;
    const int numCylinders;
    string color;
    const double tankSize;
