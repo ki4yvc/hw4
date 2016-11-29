@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
    string type;
    double fuel;
    string color;
-   
+   v=new Vehicle(infile);
    infile >> type;
 
    while(!infile.eof())

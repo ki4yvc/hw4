@@ -18,7 +18,7 @@ Vehicle::Vehicle(ifstream &infile):
 numDoors(4), numCylinders(8), tankSize(10),
 transmissionType(6) {
 	double fuel = -1.0;
-	while(!infile.eof()) {
+	if(!infile.eof()) {
 		infile >> type >> fuel >> color;
 		if(type == "taxi") {
 			new Taxi(fuel, color);
