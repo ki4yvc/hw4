@@ -57,7 +57,7 @@ void ParkingLot::printTotals() const
 		else
 			taxis = 0;
 	}
-	cout << "Total trucks: " << trucks << endl;
-	cout << "Total taxis: " << taxis << endl;
-	cout << "Total vehicles: " << trucks+taxis << endl;
+	std:cout << "Total trucks: " << trucks << std:endl;
+	std:cout << "Total taxis: " << taxis << std:endl;
+	std:cout << "Total vehicles: " << trucks+taxis << std:endl;
 }

@@ -28,7 +28,7 @@ Taxi::~Taxi()
 	count--;
 }
 
-virtual bool Taxi::hasPossession() const
+bool Taxi::hasPossession() const
 {
 	if(customers){
 		return true;
@@ -39,15 +39,15 @@ virtual bool Taxi::hasPossession() const
 
 void Taxi::setCustomers(bool test)
 {
-	cargo = test;
+	customers = test;
 }
 
-static int Taxi::getCount()
+int Taxi::getCount()
 {
 	return count;
 }
 
-static void Taxi::incCount()
+void Taxi::incCount()
 {
 	count++;
 }
