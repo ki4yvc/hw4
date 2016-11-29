@@ -13,7 +13,7 @@ Taxi::Taxi()
 	count++;
 }
 
-Taxi::Taxi(double fuel, string color) : Vehicle(fuel, color)
+Taxi::Taxi(double fuel, string color) : Vehicle(4, 6, color, 10.0, fuel, 5)
 {
 	count++;
 }
@@ -37,13 +37,9 @@ virtual bool Taxi::hasPossession() const
 	}
 }
 
-void Taxi::setCustomers(bool)
+void Taxi::setCustomers(bool test)
 {
-	if(bool){
-		customers = true;
-	} else {
-		customers = false;
-	}
+	cargo = test;
 }
 
 static int Taxi::getCount()

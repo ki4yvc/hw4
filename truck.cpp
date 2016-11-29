@@ -19,7 +19,7 @@ Truck::Truck(double)
 	count++;
 }
 
-Truck::Truck(double fuel, string color) : Vehicle(fuel, color)
+Truck::Truck(double fuel, string color) : Vehicle(4, 8, color, 10.0, fuel, 6)
 {
 	count++;
 }
