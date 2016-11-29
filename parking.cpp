@@ -1,3 +1,11 @@
+/* Name: Dylan Wilcox (dawilco sec 1), Nicholas Gustafson (ngustaf sec 2)
+ * Course: CPSC1070
+ * Assignment: HW #4
+ * Due: November 29th, 2016
+ *
+ * Description: ParkingLot Controller that stores vehicles in list
+ */
+
 #include "parking.h"
 using namespace std;
 ParkingLot::ParkingLot(string id)
