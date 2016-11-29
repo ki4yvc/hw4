@@ -7,6 +7,7 @@ fuelLevel(10.0), transmissionType(6)
 
 }
 
+// Validation is required  in the contructor
 Vehicle::Vehicle(const int doors, const int cylinders, string color,
            const double tank, double initialfuel,
            const int transmission):
@@ -18,6 +19,11 @@ transmissionType(transmission)
 }
 
 Vehicle::~Vehicle()
+{
+
+}
+// Returns number of vehicles
+static int Vehicle::getCount()
 {
 
 }

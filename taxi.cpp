@@ -5,7 +5,7 @@ Taxi::Taxi()
 	count++;
 }
 
-Taxi::Taxi(double fuel, string color)
+Taxi::Taxi(double fuel, string color) : Vehicle(fuel, color)
 {
 	count++;
 }
