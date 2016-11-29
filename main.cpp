@@ -20,7 +20,7 @@ using namespace std;
 int main(int argc, char *argv[])
 {
    ParkingLot lot("Lot C1");
-   
+
    Vehicle *v;
    ifstream infile;
    infile.open(argv[1]);
@@ -37,13 +37,13 @@ int main(int argc, char *argv[])
       if(type == "taxi")
       {
          v = new Taxi(fuel, color);
-         lot.addVehicle(v); 
+         lot.addVehicle(v);
          Taxi::incCount();
       }
       else if(type == "truck")
       {
          v = new Truck(fuel, color);
-         lot.addVehicle(v); 
+         lot.addVehicle(v);
          Truck::incCount();
       }
       else
@@ -51,23 +51,20 @@ int main(int argc, char *argv[])
          cout << "\nerror\n\n";
          exit(1);
       }
-     
+
       infile >> type;
    }
 
 
-   cout << "\nThe vehicles get stuck in traffic and respond: \n"; 
-   /** COMPLETE FOR HOMEWORK 4  **/
-   /** write the code to call the horn method for each vehicle **/
-	lot.traffic();
-
+   cout << "\nThe vehicles get stuck in traffic and respond: \n";
+   //calls the method to the lot tomake all the horns go off
+   lot.traffic();
 
    lot.printVehicles();
 
    cout << endl;
-   cout << lot.getID() << " count:"; 
-   lot.printTotals();  
+   cout << lot.getID() << " count:";
+   lot.printTotals();
 
-   
    return 0;
 }

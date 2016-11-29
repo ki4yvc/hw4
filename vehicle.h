@@ -22,15 +22,12 @@ class Vehicle
    Vehicle(ifstream &infile);
    Vehicle(const int doors, const int cylinders, string color,
            const double tank, double initialfuel,
-           const int transmission);//assigns the parameter to the
-	//corresponding data members
+           const int transmission);
    static int getCount();
-   virtual ~Vehicle();//does nothing
+   virtual ~Vehicle();
    void setType(string type);
    void setColor(string color);
-   void setFuelLevel(double amount);//verifies that amount is
-	//in the range (0, tanksize]. if not, assign fuel Level
-	//the value 5.0
+   void setFuelLevel(double amount);
    const string getType() const;
    const int getDoors() const;
    const int getCylinders() const;

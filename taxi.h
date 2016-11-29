@@ -28,11 +28,6 @@ class Taxi : public Vehicle
    virtual void printInfo() const;
    virtual void horn() const;
 
-   /**  COMPLETE FOR HOMEWORK 4                                **/
-   /**  write declaration for pure virtual function horn       **/
-   /**  write declaration for pure virtual function printInfo  **/
-   /**  write declaration for virtual function hasPossession   **/
-
   private:
    bool customers;
    static int count;
@@ -40,4 +35,4 @@ class Taxi : public Vehicle
 };
 
 #endif
-   
+
