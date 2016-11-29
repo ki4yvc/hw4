@@ -19,13 +19,18 @@ class Vehicle
 {
   public:
    Vehicle();
+   Vehicle(ifstream &infile);
    Vehicle(const int doors, const int cylinders, string color,
            const double tank, double initialfuel,
-           const int transmission);
-   virtual ~Vehicle();
+           const int transmission);//assigns the parameter to the
+	//corresponding data members
+   static int getCount();
+   virtual ~Vehicle();//does nothing
    void setType(string type);
    void setColor(string color);
-   void setFuelLevel(double amount);
+   void setFuelLevel(double amount);//verifies that amount is
+	//in the range (0, tanksize]. if not, assign fuel Level
+	//the value 5.0
    const string getType() const;
    const int getDoors() const;
    const int getCylinders() const;
@@ -33,10 +38,9 @@ class Vehicle
    const double getTankSize() const;
    const double getFuelLevel() const;
    const int getTransmissionType() const;
-   static int getCount();
 
-   virtual void horn();
-   virtual void print();
+   virtual void horn() const;
+   virtual void print() const;
 
   protected:
    string type;

@@ -18,13 +18,19 @@ class Truck : public Vehicle
   public:
    Truck();
    Truck(double);
-   Truck(double fuel, string color);
-   ~Truck();
-   virtual bool hasPossession() const;
+   Truck(ifstream &infile);
+   Truck(double fuel, string color);//the initializtion list will
+	//consist of constant values for the number of doors, cylinders,
+	//tank size, and the transmission type. The fuel and color
+	//parameters are used for the other values needed by the Vehicle
+	//constructor. Sets the type field to "Truck".
+   ~Truck(); //does nothing
+   virtual bool hasPossession() const;//returns cargo
    void setCargo(bool);
-   static int getCount();
-   static void incCount();
-   virtual void print();
+   static int getCount();//returns the truck count
+   static void incCount();//increments the count for trucks
+   virtual void printInfo() const;
+   virtual void horn() const;
 
    /**  COMPLETE FOR HOMEWORK 4                              **/
    /** write declaration for pure virtual function horn      **/

@@ -1,4 +1,4 @@
-#ifndef TAXI_H
+ #ifndef TAXI_H
 #define TAXI_H
 /* Name: Dylan Wilcox (dawilco sec 1), Nicholas Gustafson (ngustaf sec 2)
  * Course: CPSC1070
@@ -17,6 +17,7 @@ class Taxi : public Vehicle
 {
   public:
    Taxi();
+   Taxi(ifstream &infile);
    Taxi(double fuel, string color);
    Taxi(double);
    ~Taxi();
@@ -24,6 +25,8 @@ class Taxi : public Vehicle
    void setCustomers(bool);
    static int getCount();
    static void incCount();
+   virtual void printInfo() const;
+   virtual void horn() const;
 
    /**  COMPLETE FOR HOMEWORK 4                                **/
    /**  write declaration for pure virtual function horn       **/

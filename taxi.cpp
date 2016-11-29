@@ -13,6 +13,10 @@ Taxi::Taxi():Vehicle()
 	setType("taxi");
 }
 
+Taxi::Taxi(ifstream &infile):Vehicle(infile) {
+	setType("taxi");
+}
+
 Taxi::Taxi(double fuel, string color) : Vehicle(4, 6, color, 10.0, fuel, 5)
 {
 	setType("taxi");
@@ -23,18 +27,11 @@ Taxi::Taxi(double fuel):Vehicle(4,6,"Yellow",10.0, fuel,5)
 	setType("taxi");
 }
 
-Taxi::~Taxi()
-{
-	count--;
-}
+Taxi::~Taxi() {}
 
 bool Taxi::hasPossession() const
 {
-	if(customers){
-		return true;
-	} else {
-		return false;
-	}
+	return custormers;
 }
 
 void Taxi::setCustomers(bool test)
@@ -50,4 +47,22 @@ int Taxi::getCount()
 void Taxi::incCount()
 {
 	count++;
+}
+
+void printInfo() const {
+	cout << "Type: Taxi" << endl;
+	if(customers)
+		cout << "Has customers" << endl;
+	else
+		cout << "No customers" << endl;
+	cout << "Number of doors: " << getDoors() << endl;
+	cout << "Number of Cylinders: " << getCylinders() << endl;
+	cout << "Color: " << getColor() << endl;
+	cout << "Tank Size: " << getTankSize() << endl;
+	cout << "Fuel Level: " << getFuelLevel() << endl;
+	cout << "TransmissionType(): " << getTransmissionType() << endl;
+}
+
+void horn() const {
+	cout << "beep beep" << endl;
 }

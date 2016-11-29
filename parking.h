@@ -18,12 +18,16 @@ using namespace std;
 class ParkingLot
 {
   public:
-    ParkingLot(string id);
-    ~ParkingLot();
+    ParkingLot(string id);//creates a ParkingLot object
+    ~ParkingLot();//delete the container, if necessary
     string getID() const;
-    void addVehicle(Vehicle *);
-    void printVehicles() const;
-    void printTotals() const;
+    void addVehicle(Vehicle *);//adds each vehicle to the lot
+    void printVehicles() const;//invokes the printInfo() method
+	//of each vehicle via the container of base class pointers
+    void printTotals() const;//invokes the getCount method of
+	//the Taxi class and the Truck class to print the
+	//number of Taxis and the number of Trucks, adds the two
+	//values together to print the total number of vehicles.
 
   private:
     /* write a declaration for a container to hold either

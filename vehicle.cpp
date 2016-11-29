@@ -10,8 +10,17 @@
 
 Vehicle::Vehicle():
 numDoors(4), numCylinders(8), color("Blue"), tankSize(10),
-fuelLevel(10.0), transmissionType(6)
-{ }
+fuelLevel(10.0), transmissionType(6) { }
+
+Vehicle::Vehicle(ifstream &infile) {
+	string result;
+	getline(infile, result);
+
+
+
+
+
+}
 
 // Validation is required  in the contructor
 Vehicle::Vehicle(const int doors, const int cylinders, string color,
@@ -21,7 +30,7 @@ numDoors(doors), numCylinders(cylinders), tankSize(tank),
 transmissionType(transmission)
 {
 	this->color = color;
-	fuelLevel = initialfuel;
+	setFuelLevel(initialfuel);
 }
 
 Vehicle::~Vehicle()
@@ -41,7 +50,10 @@ void Vehicle::setColor(string color)
 
 void Vehicle::setFuelLevel(double amount)
 {
-	this->fuelLevel = amount;
+	if(amount <= 0 || amount >tankSize)
+		fuelLevel = 5.0;
+	else
+		fuelLevel = amount;
 }
 
 const string Vehicle::getType() const
@@ -79,10 +91,23 @@ const int Vehicle::getTransmissionType() const
 	return transmissionType;
 }
 
-int Vehicle::getCount() {}
+int Vehicle::getCount() {
+	return -1;
+}
 
-void Vehicle::horn() {}
+void Vehicle::horn() const{
+	if(type == "taxi")
+		cout << "beep beep" << endl;
+	else if(type == "truck")
+		cout << "honk honk" << endl;
+}
 
-void Vehicle::print() {
-	
+void Vehicle::print() const{
+	cout << "Type: " << type << endl;
+	cout << "Number of doors: " << getDoors() << endl;
+        cout << "Number of Cylinders: " << getCylinders() << endl;
+        cout << "Color: " << getColor() << endl;
+        cout << "Tank Size: " << getTankSize() << endl;
+        cout << "Fuel Level: " << getFuelLevel() << endl;
+        cout << "TransmissionType(): " << getTransmissionType() << endl;
 }

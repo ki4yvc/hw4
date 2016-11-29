@@ -19,10 +19,6 @@ Truck::Truck(double fuel):Vehicle(4,8,"Blue",10.0,fuel,6)
 	setType("truck");
 }
 
-Truck::Truck(ifstream &infile):Vehicle(infile) {
-	setType("truck");
-}
-
 Truck::Truck(double fuel, string color) : Vehicle(4, 8, color, 10.0, fuel, 6)
 {
 	setType("truck");
@@ -35,7 +31,11 @@ Truck::~Truck()
 
 bool Truck::hasPossession() const
 {
-	return cargo
+	if(cargo){
+		return true;
+	} else {
+		return false;
+	}
 }
 
 void Truck::setCargo(bool test)
@@ -53,20 +53,6 @@ void Truck::incCount()
 	count++;
 }
 
-void printInfo() const {
-	cout << "Type: Truck" << endl;
-	if(cargo)
-		cout << "Has cargo" << endl;
-	else
-		cout << "No cargo" << endl;
-	cout << "Number of doors: " << getDoors() << endl;
-        cout << "Number of Cylinders: " << getCylinders() << endl;
-        cout << "Color: " << getColor() << endl;
-        cout << "Tank Size: " << getTankSize() << endl;
-        cout << "Fuel Level: " << getFuelLevel() << endl;
-        cout << "TransmissionType(): " << getTransmissionType() << endl;
-}
-
-void horn() const {
-	cout << "honk honk" << endl;
+void Truck::print() {
+	
 }
