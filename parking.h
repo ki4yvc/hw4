@@ -28,6 +28,7 @@ class ParkingLot
 	//the Taxi class and the Truck class to print the
 	//number of Taxis and the number of Trucks, adds the two
 	//values together to print the total number of vehicles.
+    void traffic() const;
 
   private:
     /* write a declaration for a container to hold either

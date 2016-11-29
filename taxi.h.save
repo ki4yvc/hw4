@@ -1,0 +1,47 @@
+#ifndef TAXI_H
+#define TAXI_H
+/* Name: Dylan Wilcox (dawilco sec 1), Nicholas Gustafson (ngustaf sec 2)
+ * Course: CPSC1070
+ * Assignment: HW #4
+ * Due: November 29th, 2016
+ *
+ * Description: Header file for taxi class.
+ */
+
+#include <string>
+#include "vehicle.h"
+
+using namespace std;
+
+class Taxi : public Vehicle
+{
+  public:
+   Taxi();
+   Taxi(ifstream &infile);
+   Taxi(double fuel, string color);//the initialization list will
+	//consist of constant values for the number of doors, cylinders,
+	//tanksize, and the transmission type. The fuel and color
+	//parameters are used for the other values needed by the Vehicle
+	//constructor. Sets the type field to "Taxi".
+   Taxi(double);
+   ~Taxi(); //does nothing
+   virtual bool hasPossession() const; //returns cargo
+   void setCustomers(bool);
+   static int getCount();//returns the count of Taxi vehicles
+   static void incCount();//increments the count of Taxi vehicles.
+   virtual void printInfo() const;
+   virtual void horn() const;
+
+   /**  COMPLETE FOR HOMEWORK 4                                **/
+   /**  write declaration for pure virtual function horn       **/
+   /**  write declaration for pure virtual function printInfo  **/
+   /**  write declaration for virtual function hasPossession   **/
+
+  private:
+   bool customers;
+   static int count;
+
+};
+
+#endif
+   

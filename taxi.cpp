@@ -31,7 +31,7 @@ Taxi::~Taxi() {}
 
 bool Taxi::hasPossession() const
 {
-	return custormers;
+	return customers;
 }
 
 void Taxi::setCustomers(bool test)
@@ -49,20 +49,15 @@ void Taxi::incCount()
 	count++;
 }
 
-void printInfo() const {
+void Taxi::printInfo() const {
 	cout << "Type: Taxi" << endl;
+	Vehicle::print();
 	if(customers)
 		cout << "Has customers" << endl;
 	else
 		cout << "No customers" << endl;
-	cout << "Number of doors: " << getDoors() << endl;
-	cout << "Number of Cylinders: " << getCylinders() << endl;
-	cout << "Color: " << getColor() << endl;
-	cout << "Tank Size: " << getTankSize() << endl;
-	cout << "Fuel Level: " << getFuelLevel() << endl;
-	cout << "TransmissionType(): " << getTransmissionType() << endl;
 }
 
-void horn() const {
+void Taxi::horn() const {
 	cout << "beep beep" << endl;
 }

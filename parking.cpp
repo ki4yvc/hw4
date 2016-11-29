@@ -56,3 +56,8 @@ void ParkingLot::printTotals() const
 	std::cout << "Total taxis: " << taxis << std::endl;
 	std::cout << "Total vehicles: " << trucks+taxis << std::endl;
 }
+
+void ParkingLot::traffic() const {
+	for(int i = 0; i<(int)allVehicles.size(); i++)
+                allVehicles[i]->horn();
+}

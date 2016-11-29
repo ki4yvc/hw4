@@ -7,18 +7,28 @@
  */
 
 #include "vehicle.h"
+#include "truck.h"
+#include "taxi.h"
 
 Vehicle::Vehicle():
 numDoors(4), numCylinders(8), color("Blue"), tankSize(10),
 fuelLevel(10.0), transmissionType(6) { }
 
-Vehicle::Vehicle(ifstream &infile) {
-	string result;
-	getline(infile, result);
-
-
-
-
+Vehicle::Vehicle(ifstream &infile):
+numDoors(4), numCylinders(8), tankSize(10),
+transmissionType(6) {
+	double fuel = -1.0;
+	
+	while(!infile.eof()) {
+		infile >> type >> fuel >> color;
+		if(type == "taxi") {
+			new Taxi(fuel, color);
+			Taxi::incCount();
+		} else if(type == "truck") {
+			new Truck(fuel, color);
+			Truck::incCount();
+    		}
+	}
 
 }
 

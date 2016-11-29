@@ -8,6 +8,7 @@
  */
 
  #include "truck.h"
+#include "vehicle.h"
 int Truck::count = 0;
 Truck::Truck():Vehicle()
 {
@@ -35,7 +36,7 @@ Truck::~Truck()
 
 bool Truck::hasPossession() const
 {
-	return cargo
+	return cargo;
 }
 
 void Truck::setCargo(bool test)
@@ -53,20 +54,15 @@ void Truck::incCount()
 	count++;
 }
 
-void printInfo() const {
-	cout << "Type: Truck" << endl;
+void Truck::printInfo() const {
+	cout << "Truck:" << endl;
+	Vehicle::print();
 	if(cargo)
 		cout << "Has cargo" << endl;
 	else
 		cout << "No cargo" << endl;
-	cout << "Number of doors: " << getDoors() << endl;
-        cout << "Number of Cylinders: " << getCylinders() << endl;
-        cout << "Color: " << getColor() << endl;
-        cout << "Tank Size: " << getTankSize() << endl;
-        cout << "Fuel Level: " << getFuelLevel() << endl;
-        cout << "TransmissionType(): " << getTransmissionType() << endl;
 }
 
-void horn() const {
+void Truck::horn() const {
 	cout << "honk honk" << endl;
 }
