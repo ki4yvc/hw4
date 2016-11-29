@@ -33,6 +33,7 @@ class Vehicle
    const double getTankSize() const;
    const double getFuelLevel() const;
    const int getTransmissionType() const;
+   static int getCount();
 
    virtual void horn();
    virtual void print();

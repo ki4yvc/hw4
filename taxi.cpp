@@ -8,19 +8,22 @@
 
 #include "taxi.h"
 int Taxi::count = 0;
-Taxi::Taxi()
+Taxi::Taxi():Vehicle()
 {
 	count++;
+	setType("taxi");
 }
 
 Taxi::Taxi(double fuel, string color) : Vehicle(4, 6, color, 10.0, fuel, 5)
 {
 	count++;
+	setType("taxi");
 }
 
-Taxi::Taxi(double)
+Taxi::Taxi(double fuel):Vehicle(4,6,"Yellow",10.0, fuel,5)
 {
 	count++;
+	setType("taxi");
 }
 
 Taxi::~Taxi()

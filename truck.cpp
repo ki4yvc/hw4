@@ -9,19 +9,22 @@
 
  #include "truck.h"
 int Truck::count = 0;
-Truck::Truck()
+Truck::Truck():Vehicle()
 {
 	count++;
+	setType("truck");
 }
 
-Truck::Truck(double)
+Truck::Truck(double fuel):Vehicle(4,8,"Blue",10.0,fuel,6)
 {
 	count++;
+	setType("truck");
 }
 
 Truck::Truck(double fuel, string color) : Vehicle(4, 8, color, 10.0, fuel, 6)
 {
 	count++;
+	setType("truck");
 }
 
 Truck::~Truck()

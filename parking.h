@@ -11,6 +11,7 @@
 #include <vector>
 #include <string>
 #include <iostream>
+#include "vehicle.h"
 
 using namespace std;
 
@@ -32,8 +33,8 @@ class ParkingLot
 
 
     string id;
-    list<Vehicle *> allVehicles;
-    list<Vehicle *>::iterator iter;
+    vector<Vehicle *> allVehicles;
+    vector<Vehicle *>::iterator iter;
 };
 
 #endif
