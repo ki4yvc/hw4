@@ -9,11 +9,9 @@
 #include "vehicle.h"
 
 Vehicle::Vehicle():
-numDoors(4), numCylinders(8), tankSize(10), color("Blue"),
+numDoors(4), numCylinders(8), color("Blue"), tankSize(10),
 fuelLevel(10.0), transmissionType(6)
-{
-
-}
+{ }
 
 // Validation is required  in the contructor
 Vehicle::Vehicle(const int doors, const int cylinders, string color,
@@ -27,11 +25,6 @@ transmissionType(transmission)
 }
 
 Vehicle::~Vehicle()
-{
-
-}
-// Returns number of vehicles
-static int Vehicle::getCount()
 {
 
 }

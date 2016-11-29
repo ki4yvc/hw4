@@ -29,7 +29,7 @@ Truck::~Truck()
 	count--;
 }
 
-virtual bool Truck::hasPossession() const
+bool Truck::hasPossession() const
 {
 	if(cargo){
 		return true;
@@ -38,21 +38,17 @@ virtual bool Truck::hasPossession() const
 	}
 }
 
-void Truck::setCargo(bool)
+void Truck::setCargo(bool test)
 {
-	if(bool){
-		cargo = true;
-	} else {
-		cargoo = false;
-	}
+	cargo = test;
 }
 
-static int Truck::getCount()
+int Truck::getCount()
 {
 	return count;
 }
 
-static void Truck::incCount()
+void Truck::incCount()
 {
 	count++;
 }
