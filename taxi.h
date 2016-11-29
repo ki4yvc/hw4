@@ -1,3 +1,5 @@
+#ifndef TAXI_H
+#define TAXI_H
 /* Name: Dylan Wilcox (dawilco sec 1), Nicholas Gustafson (ngustaf sec 2)
  * Course: CPSC1070
  * Assignment: HW #4
@@ -6,11 +8,9 @@
  * Description: Header file for taxi class.
  */
 
-#ifndef TAXI_H
-#define TAXI_H
-
 #include <string>
 #include "vehicle.h"
+
 using namespace std;
 
 class Taxi : public Vehicle

@@ -1,3 +1,5 @@
+#ifndef TRUCK_H
+#define TRUCK_H
 /* Name: Dylan Wilcox (dawilco sec 1), Nicholas Gustafson (ngustaf sec 2)
  * Course: CPSC1070
  * Assignment: HW #4
@@ -6,11 +8,9 @@
  * Description: Truck header file.
  */
 
-#ifndef TRUCK_H
-#define TRUCK_H
-
 #include <string>
 #include "vehicle.h"
+
 using namespace std;
 
 class Truck : public Vehicle

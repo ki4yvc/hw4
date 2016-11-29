@@ -1,3 +1,5 @@
+#ifndef VEHICLE_H
+#define VEHICLE_H
 /* Name: Dylan Wilcox (dawilco sec 1), Nicholas Gustafson (ngustaf sec 2)
  * Course: CPSC1070
  * Assignment: HW #4
@@ -6,12 +8,11 @@
  * Description: Header for vehicle object
  */
 
-#ifndef VEHICLE_H
-#define VEHICLE_H
 
 #include <iostream>
 #include <string>
 #include <fstream>
+
 using namespace std;
 
 class Vehicle

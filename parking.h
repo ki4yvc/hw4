@@ -1,3 +1,5 @@
+#ifndef PARKINGLOT_H
+#define PARKINGLOT_H
 /* Name: Dylan Wilcox (dawilco sec 1), Nicholas Gustafson (ngustaf sec 2)
  * Course: CPSC1070
  * Assignment: HW #4
@@ -9,6 +11,8 @@
 #include <vector>
 #include <string>
 #include <iostream>
+
+using namespace std;
 
 class ParkingLot
 {
@@ -31,3 +35,5 @@ class ParkingLot
     list<Vehicle *> allVehicles;
     list<Vehicle *>::iterator iter;
 };
+
+#endif
