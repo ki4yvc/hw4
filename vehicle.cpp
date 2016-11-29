@@ -18,7 +18,6 @@ Vehicle::Vehicle(ifstream &infile):
 numDoors(4), numCylinders(8), tankSize(10),
 transmissionType(6) {
 	double fuel = -1.0;
-	
 	while(!infile.eof()) {
 		infile >> type >> fuel >> color;
 		if(type == "taxi") {
@@ -112,12 +111,11 @@ void Vehicle::horn() const{
 		cout << "honk honk" << endl;
 }
 
-void Vehicle::print() const{
-	cout << "Type: " << type << endl;
-	cout << "Number of doors: " << getDoors() << endl;
-        cout << "Number of Cylinders: " << getCylinders() << endl;
-        cout << "Color: " << getColor() << endl;
-        cout << "Tank Size: " << getTankSize() << endl;
-        cout << "Fuel Level: " << getFuelLevel() << endl;
-        cout << "TransmissionType(): " << getTransmissionType() << endl;
+void Vehicle::printInfo() const{
+	cout << "Number of doors: " << numDoors << endl;
+        cout << "Number of Cylinders: " << numCylinders << endl;
+        cout << "Color: " << color << endl;
+        cout << "Tank Size: " << tankSize << endl;
+        cout << "Fuel Level: " << fuelLevel << endl;
+        cout << "Transmission type: " << transmissionType << endl;
 }

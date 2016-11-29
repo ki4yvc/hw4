@@ -7,7 +7,7 @@
  * Description: Truck controller class.
  */
 
- #include "truck.h"
+#include "truck.h"
 #include "vehicle.h"
 int Truck::count = 0;
 Truck::Truck():Vehicle()
@@ -29,10 +29,7 @@ Truck::Truck(double fuel, string color) : Vehicle(4, 8, color, 10.0, fuel, 6)
 	setType("truck");
 }
 
-Truck::~Truck()
-{
-	count--;
-}
+Truck::~Truck() { }
 
 bool Truck::hasPossession() const
 {
@@ -56,7 +53,7 @@ void Truck::incCount()
 
 void Truck::printInfo() const {
 	cout << "Truck:" << endl;
-	Vehicle::print();
+	Vehicle::printInfo();
 	if(cargo)
 		cout << "Has cargo" << endl;
 	else

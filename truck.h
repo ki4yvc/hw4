@@ -40,7 +40,6 @@ class Truck : public Vehicle
   private:
    bool cargo;
    static int count;
-
 };
 
 #endif

@@ -40,7 +40,7 @@ class Vehicle
    const int getTransmissionType() const;
 
    virtual void horn() const;
-   virtual void print() const;
+   virtual void printInfo() const;
 
   protected:
    string type;

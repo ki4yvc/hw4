@@ -7,6 +7,8 @@
  */
 
 #include "parking.h"
+#include "truck.h"
+#include "taxi.h"
 using namespace std;
 ParkingLot::ParkingLot(string id)
 {
@@ -15,7 +17,8 @@ ParkingLot::ParkingLot(string id)
 
 ParkingLot::~ParkingLot()
 {
-
+	for(int i = 0; i<(int)allVehicles.size(); i++)
+                delete allVehicles[i];
 }
 
 string ParkingLot::getID() const
@@ -31,7 +34,7 @@ void ParkingLot::addVehicle(Vehicle* v)
 void ParkingLot::printVehicles() const
 {
 	for(int i = 0; i<(int)allVehicles.size(); i++)
-		allVehicles[i]->print();
+		allVehicles[i]->printInfo();
 }
 
 void ParkingLot::printTotals() const
@@ -41,15 +44,15 @@ void ParkingLot::printTotals() const
 	int i = 0;
 	while((trucks < 0 || taxis < 0) && i < (int)allVehicles.size()) {
 		if(allVehicles[i]->getType() == "truck")
-			trucks = allVehicles[i]->getCount();
-		else
-			taxis = allVehicles[i]->getCount();
+			trucks = Truck::getCount();
+		else if(allVehicles[i]->getType() == "taxi")
+			taxis = Taxi::getCount();
 		i++;
 	}
 	if(i == (int)allVehicles.size()) {
 		if(trucks < 0)
 			trucks = 0;
-		else if(taxis < 0)
+		if(taxis < 0)
 			taxis = 0;
 	}
 	std::cout << "Total trucks: " << trucks << std::endl;

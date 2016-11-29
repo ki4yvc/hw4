@@ -51,7 +51,7 @@ void Taxi::incCount()
 
 void Taxi::printInfo() const {
 	cout << "Type: Taxi" << endl;
-	Vehicle::print();
+	Vehicle::printInfo();
 	if(customers)
 		cout << "Has customers" << endl;
 	else
