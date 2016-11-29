@@ -9,7 +9,7 @@
 #include "vehicle.h"
 
 Vehicle::Vehicle():
-numDoors(4), numCylinders(8), tankSize(10), color("Blue"),
+numDoors(4), numCylinders(8), color("Blue"), tankSize(10),
 fuelLevel(10.0), transmissionType(6)
 {
 
