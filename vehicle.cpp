@@ -78,3 +78,6 @@ const int Vehicle::getTransmissionType() const
 {
 	return transmissionType;
 }
+
+int Vehicle::getCount() {
+}
