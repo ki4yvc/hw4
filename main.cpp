@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
    cout << "\nThe vehicles get stuck in traffic and respond: \n"; 
    /** COMPLETE FOR HOMEWORK 4  **/
    /** write the code to call the horn method for each vehicle **/
-
+	
 
 
    lot.printVehicles();

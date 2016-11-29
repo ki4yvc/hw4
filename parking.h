@@ -29,12 +29,10 @@ class ParkingLot
     /* write a declaration for a container to hold either
        a vector of Vehicle pointers OR a linked-list of
        Vehicle pointers.
-    */ 
-
+    */
 
     string id;
     vector<Vehicle *> allVehicles;
-    vector<Vehicle *>::iterator iter;
 };
 
 #endif

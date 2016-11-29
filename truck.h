@@ -24,6 +24,7 @@ class Truck : public Vehicle
    void setCargo(bool);
    static int getCount();
    static void incCount();
+   virtual void print();
 
    /**  COMPLETE FOR HOMEWORK 4                              **/
    /** write declaration for pure virtual function horn      **/
